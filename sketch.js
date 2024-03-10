@@ -58,7 +58,7 @@ function writePosition(x,y){
   database.ref("ball/position").set({
     'x':position.x+x,
     'y':position.y+y,
-    'data':position.data+data,
+    data:position.data+data,
   })
   
 }
