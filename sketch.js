@@ -54,7 +54,7 @@ function writePosition(x,y){
 function readPosition(data){
   position = data.val();
   console.log(position.x);
-  c
+  
   ball.x = position.x;
   ball.y = position.y;
  
