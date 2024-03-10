@@ -1,6 +1,6 @@
 var ball, database;
 var position;
-
+var velcoityY
 
 
 function setup(){
