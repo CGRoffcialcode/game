@@ -1,6 +1,6 @@
 var ball, database;
 var position;
-var velcoityY;
+
 
 
 function setup(){
@@ -41,7 +41,7 @@ function writePosition(x,y){
   database.ref("ball/position").set({
     'x':position.x+x,
     'y':position.y+y,
-    'setting':position.velocityY+velocityY,
+    'setting':position.velcoityY+velcoityY,
   })
   
 }
@@ -51,7 +51,7 @@ function readPosition(data){
   console.log(position.x);
   ball.x = position.x;
   ball.y = position.y;
-  ball.velcoityY = position.velocityY;
+  ball.velcoityY = position.velocoityY;
 }
 
 function showError(){
