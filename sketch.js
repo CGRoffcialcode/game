@@ -1,6 +1,6 @@
 var ball, database;
 var position;
-var datawrite = 0;
+var data = 0;
 var x ;
 var y;
 
