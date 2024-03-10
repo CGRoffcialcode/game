@@ -24,7 +24,7 @@ function draw(){
   // giving movements to ball 
     if(keyDown(LEFT_ARROW)){
       writePosition(-1,0);
-      datawrite = {
+      data = {
         x:-1,
         y:0
       }
@@ -67,7 +67,7 @@ function readPosition(data){
   position = data.val();
   console.log(position.x);
   ball.x = position.x;
-  datawrite = position.data;
+  datawrite = position.datawrite;
 }
 
 function showError(){
