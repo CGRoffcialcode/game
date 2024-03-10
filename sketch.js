@@ -1,6 +1,6 @@
 var ball, database;
 var position;
-var data;
+var datawrite = 0;
 var x ;
 var y;
 
@@ -24,28 +24,28 @@ function draw(){
   // giving movements to ball 
     if(keyDown(LEFT_ARROW)){
       writePosition(-1,0);
-      data = {
+      datawrite = {
         x:-1,
         y:0
       }
     }
     else if(keyDown(RIGHT_ARROW)){
       writePosition(1,0);
-      data = {
+      datawrite = {
         x:1,
         y:0
       }
     }
     else if(keyDown(UP_ARROW)){
       writePosition(0,-1);
-      data = {
+      datawrite = {
         x:0,
         y:-1
       }
     }
     else if(keyDown(DOWN_ARROW)){
       writePosition(0,+1);
-      data = {
+      datawrite = {
         x:0,
         y:1
       }
@@ -58,7 +58,7 @@ function writePosition(x,y){
   database.ref("ball/position").set({
     'x':position.x+x,
     'y':position.y+y,
-    data:position.data+data,
+    datawrite:position.datawrite+datawrite,
   })
   
 }
@@ -67,7 +67,7 @@ function readPosition(data){
   position = data.val();
   console.log(position.x);
   ball.x = position.x;
-  data = position.data
+  datawrite = position.data;
 }
 
 function showError(){
